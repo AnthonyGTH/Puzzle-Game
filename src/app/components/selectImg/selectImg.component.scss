@@ -1,0 +1,64 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background: rgba(0, 0, 0, 0);
+}
+
+.slidesImg {
+  width: 100vw;
+  height: 40vh;
+  background: white;
+  position: absolute;
+  bottom: 5vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.buttonUp {
+  width: 100vw;
+  height: 10vh;
+  background: rgba(0, 0, 0, 0.5);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 45vh;
+  box-shadow: 0px -1px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.imgSlide {
+  height: 28vh;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slide {
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.upload-btnImg-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btnImg {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.upload-btnImg-wrapper input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+}

@@ -1,0 +1,104 @@
+$pieces: 27vw;
+.container {
+  min-height: 90vh;
+  background: black;
+  background-size: contain;
+  touch-action: pan-y;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  width: $pieces * 3;
+  height: $pieces * 3;
+  max-width: none;
+  position: absolute;
+}
+
+.done1 {
+  top: 0;
+}
+
+.done2 {
+  top: 0;
+  left: -$pieces;
+}
+
+.done3 {
+  top: 0;
+  right: 0;
+}
+
+.done4 {
+  left: 0;
+}
+
+.done5 {
+  left: -$pieces;
+}
+
+.done6 {
+  right: 0;
+}
+
+.done7 {
+  bottom: 0;
+}
+
+.done8 {
+  bottom: 0;
+  left: -$pieces;
+}
+
+.done9 {
+  bottom: 0;
+  right: 0;
+}
+
+.example-container {
+  width: $pieces;
+  height: $pieces;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  overflow: hidden;
+}
+
+.pieces-container {
+  width: $pieces;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  overflow: hidden;
+}
+
+.example-list {
+  border: solid 1px #ccc;
+  width: $pieces;
+  height: $pieces;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.example-box {
+  padding: 0;
+  width: $pieces;
+  height: $pieces;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+}

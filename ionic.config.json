@@ -1,0 +1,7 @@
+{
+  "name": "puzzlePhotoApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

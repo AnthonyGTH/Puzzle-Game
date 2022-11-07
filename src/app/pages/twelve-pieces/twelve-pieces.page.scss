@@ -1,0 +1,141 @@
+$pieces: 21vw;
+.container {
+  min-height: 90vh;
+  background: black;
+  background-size: contain;
+  touch-action: pan-y;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  width: $pieces * 4;
+  height: $pieces * 4;
+  max-width: none;
+  position: absolute;
+}
+
+.done1 {
+  top: 0;
+}
+
+.done2 {
+  top: 0;
+  left: -$pieces;
+}
+
+.done3 {
+  top: 0;
+  left: -2 * $pieces;
+}
+
+.done4 {
+  top: 0;
+  right: 0;
+}
+
+.done5 {
+  top: -$pieces;
+}
+
+.done6 {
+  top: -$pieces;
+  left: -$pieces;
+}
+
+.done7 {
+  top: -$pieces;
+  left: -2 * $pieces;
+}
+
+.done8 {
+  top: -$pieces;
+  right: 0;
+}
+
+.done9 {
+  top: -2 * $pieces;
+}
+
+.done10 {
+  top: -2 * $pieces;
+  left: -$pieces;
+}
+
+.done11 {
+  top: -2 * $pieces;
+  left: -2 * $pieces;
+}
+
+.done12 {
+  top: -2 * $pieces;
+  right: 0;
+}
+
+.done13 {
+  bottom: 0;
+  left: 0;
+}
+
+.done14 {
+  bottom: 0;
+  left: -$pieces;
+}
+
+.done15 {
+  bottom: 0;
+  left: -2 * $pieces;
+}
+
+.done16 {
+  bottom: 0;
+  right: 0;
+}
+
+.example-container {
+  width: $pieces;
+  height: $pieces;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  overflow: hidden;
+}
+
+.pieces-container {
+  width: $pieces;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  overflow: hidden;
+}
+
+.example-list {
+  border: solid 1px #ccc;
+  width: $pieces;
+  height: $pieces;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.example-box {
+  padding: 0;
+  width: $pieces;
+  height: $pieces;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+}

@@ -1,0 +1,170 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+* {
+    font-family: 'Lilita One', cursive;
+}
+
+
+/* ----------------------------------------------
+ * Animations
+ * ---------------------------------------------- */
+
+@-webkit-keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes slide-out-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+    100% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0
+    }
+}
+
+@keyframes slide-out-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+    100% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.slide-in-bottom {
+    -webkit-animation: slide-in-bottom .5s cubic-bezier(.25, .46, .45, .94) both;
+    animation: slide-in-bottom .5s cubic-bezier(.25, .46, .45, .94) both
+}
+
+.slide-out-bottom {
+    -webkit-animation: slide-out-bottom .5s cubic-bezier(.55, .085, .68, .53) both;
+    animation: slide-out-bottom .5s cubic-bezier(.55, .085, .68, .53) both
+}
+
+.fade-in {
+    -webkit-animation: fade-in 2s cubic-bezier(.39, .575, .565, 1.000) both;
+    animation: fade-in 0.5s cubic-bezier(.39, .575, .565, 1.000) both
+}
+
+
+/* ----------------------------------------------
+  * End animations
+  * ---------------------------------------------- */
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+    border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+selectImg {
+    position: absolute;
+}
+
+.tablero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectPiece {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar {
+    height: 20px;
+    width: 99%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0.5%;
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+}
+
+.help {
+    position: absolute;
+}
+
+.helper {
+    opacity: 0.8;
+}
+
+.alert-button {
+    height: 15vh!important;
+    font-size: 5em!important;
+}

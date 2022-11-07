@@ -1,0 +1,69 @@
+<ion-content>
+    <div class="container">
+        <div class="tablero">
+            <ion-row text-center padding-top>
+                <ion-col size-xs="12" size-sm="12">
+                    <img *ngIf="helpImg" class="help" [src]="img">
+                    <div [class]="classContainer">
+                        <div id="done1" cdkDropList #doneList1="cdkDropList" [cdkDropListData]="done1" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
+                            <div class="example-box" *ngFor="let item of done1" cdkDrag><img class="done1" [src]="img"></div>
+                        </div>
+                    </div>
+                    <div [class]="classContainer">
+                        <div id="done2" cdkDropList #doneList2="cdkDropList" [cdkDropListData]="done2" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
+                            <div class="example-box" *ngFor="let item of done2" cdkDrag><img class="done2" [src]="img"></div>
+                        </div>
+                    </div>
+                    <div [class]="classContainer">
+                        <div id="done3" cdkDropList #doneList3="cdkDropList" [cdkDropListData]="done3" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
+                            <div class="example-box" *ngFor="let item of done3" cdkDrag><img class="done3" [src]="img"></div>
+                        </div>
+                    </div>
+                    <div [class]="classContainer">
+                        <div id="done4" cdkDropList #doneList4="cdkDropList" [cdkDropListData]="done4" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
+                            <div class="example-box" *ngFor="let item of done4" cdkDrag><img class="done4" [src]="img"></div>
+                        </div>
+                    </div>
+                    <div [class]="classContainer">
+                        <div id="done5" cdkDropList #doneList5="cdkDropList" [cdkDropListData]="done5" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
+                            <div class="example-box" *ngFor="let item of done5" cdkDrag><img class="done5" [src]="img"></div>
+                        </div>
+                    </div>
+                    <div [class]="classContainer">
+                        <div id="done6" cdkDropList #doneList6="cdkDropList" [cdkDropListData]="done6" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
+                            <div class="example-box" *ngFor="let item of done6" cdkDrag><img class="done6" [src]="img"></div>
+                        </div>
+                    </div>
+                    <div [class]="classContainer">
+                        <div id="done7" cdkDropList #doneList7="cdkDropList" [cdkDropListData]="done7" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
+                            <div class="example-box" *ngFor="let item of done7" cdkDrag><img class="done7" [src]="img"></div>
+                        </div>
+                    </div>
+                    <div [class]="classContainer">
+                        <div id="done8" cdkDropList #doneList8="cdkDropList" [cdkDropListData]="done8" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
+                            <div class="example-box" *ngFor="let item of done8" cdkDrag><img class="done8" [src]="img"></div>
+                        </div>
+                    </div>
+                    <div [class]="classContainer">
+                        <div id="done9" cdkDropList #doneList9="cdkDropList" [cdkDropListData]="done9" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="evenPredicate">
+                            <div class="example-box" *ngFor="let item of done9" cdkDrag><img class="done9" [src]="img"></div>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="selectPiece">
+            <ion-row>
+                <ion-col size-xs="12" size-sm="12">
+                    <div class="pieces-container">
+                        <div id="pieces" cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList1, doneList2, doneList3, doneList4, doneList5, doneList6, doneList7, doneList8, doneList9]" class="example-list" (cdkDropListDropped)="drop($event)">
+                            <div class="example-box" *ngFor="let item of todo" [cdkDragData]="item" cdkDrag><img *ngIf="showPieces" [class]="item.done" [src]="img"></div>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-content>
+<selectImg (selectedImg)="changeImg( $event )" *ngIf="selectImg" [ngClass]="selectImg"></selectImg>
+<footerBar (selectedImg)="changeImg( $event )" (button3)="muestraComponente()" (button2)="help()"></footerBar>
